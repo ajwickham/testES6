@@ -1,0 +1,58 @@
+.container {
+  display:grid;
+  grid-template-columns: 5% 35% 20% 35% 5%;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1vw;
+  grid-template-columns:auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column: 2;
+  background-color: black;
+}
+
+.solwrapper {
+  display: grid;
+  gap: 1vw;
+  grid-template-columns:auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column: 4;
+  background-color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.square {
+  display: grid;
+  grid-template-columns:auto auto auto;
+  background-color: aqua;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-size: 2vw;
+  height: 3vw;
+  width: 3vw;
+}
+
+
+#score {
+  grid-column: 2/34;
+  text-align: left;
+  font-size: 2vw;
+  text-decoration-line: none;
+}
+
+
+
+.vlineone {
+  grid-column: 5/6;
+  grid-row: 0/10;
+  background-color: black;
+  width: 0.5vw;
+}
