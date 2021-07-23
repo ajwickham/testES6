@@ -83,19 +83,19 @@ describe('Testing a manual fill', () => {
   });  
   test('RCorrectly recognise a repeat in a manual column from test function', () => {
     const testArray = new SudArray([1,2,3,4,5,6,7,8,9,1],[]); 
-    expect(testArray.checkManualColumn()).toEqual("Too many 1 in column 1")
+    expect(testArray.jestTest()).toEqual("Too many 1 in column 1")
   }); 
   test('SCorrectly recognise a repeat in a manual square from test function', () => {
     const testArray = new SudArray([1,2,3,4,5,6,7,8,9,2],[]); 
-    expect(testArray.test()).toEqual("Too many 2 in a square")
+    expect(testArray.jestTest()).toEqual("Too many 2 in a square")
   }); 
   test('TCorrectly recognise a repeat from a full sudoku board', () => {
     const testArray = new SudArray([2,8,6,7,4,1,9,3,5,4,2,9,3,8,5,7,6,0,3,5,7,9,6,0,4,1,8,7,4,1,5,0,9,3,8,6,8,9,0,6,1,3,5,4,7,6,3,5,8,7,4,1,0,9,5,6,8,4,3,7,0,9,1,1,7,3,0,9,8,6,5,4,9,0,4,1,5,6,8,7,3],[]); 
-    expect(testArray.test()).toEqual("Too many 2 in a square")
+    expect(testArray.jestTest()).toEqual("Too many 2 in a square")
   });
   test('UCorrectly recognise a repeat but ignore zeros', () => {
     const testArray = new SudArray([0,0,3,4,5,6,7,8,9,0,3],[]); 
-    expect(testArray.test()).toEqual("Too many 3 in a square")
+    expect(testArray.jestTest()).toEqual("Too many 3 in a square")
   });
   test('VCorrectly recognise and clean out non number characters', () => {
     const manualArray = new SudArray([0,0,"3<br>",4,5,6,7,8,9,0,3],[]); 
